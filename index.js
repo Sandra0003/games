@@ -11,23 +11,48 @@ let random
 
 choicebt.forEach(button =>{
     button.addEventListener("click",function(){
-        document.querySelector("#playertext").innerHTML = "Player : " +button.name
+        player = button.textContent
+        computerChoice()
+        playertxt.textContent=`Player : ${player}`
+        cmptxt.textContent=`Computer : ${computer}`
+        resulttxt.textContent = checkWinner()
         
     })
 })
 
 
-let hands = ["ROCK","PAPER","SCISSORS"]
 
 function computerChoice(){
-    setTimeout(() =>{
-    random = Math.floor(Math.random()*3)
-    cmpt = hands[random]
-    cmptxt.innerHTML +=  cmpt
-    },3000)
+  
+    random = Math.floor(Math.random()*3 + 1) 
+   switch(random){
+    case 1:
+        computer = "ROCK"
+        break;
+    case 2:
+        computer = "PAPER"
+        break;
+    case 3:
+        computer = "SCISSORS"
+   }
+ 
     
 }
-computerChoice()
 
+function checkWinner(){
+
+    if(player == computer){
+        return "Draw!"
+    }
+    else if(computer == "ROCK"){
+        return(player == "PAPER") ? "you win" : "you fail"
+    }
+    else if(computer == "SCISSORS"){
+        return(player == "ROCK") ? "you win" : "you fail"
+    }
+    else if(computer == "PAPER"){
+        return(player == "SCISSORS") ? "you win" : "you fail"
+    }
+}
 
 
