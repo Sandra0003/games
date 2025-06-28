@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+.to-do-box{
+    background-color:white;
+    box-shadow:0 0 48px 0 dimgray;
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    top: 50px;
+    left: 50px;
+    min-height: 200px;
+    min-width: 320px;
+    box-sizing: border-box;
+
+}
+
+
+.to-do-box h4{
+    font-family:cursive;
+    font-size: 18px;
+}
+.result{
+    margin-left: 23px;
+    text-align: left;
+
+}
+ul{
+    list-style: none;
+    font-size: 28px;
+}
+li button{
+    border: none;
+    background-color: transparent;
+    font-size:20px;
+}
